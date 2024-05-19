@@ -1,0 +1,74 @@
+html,
+body {
+  height: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  font-size: 14px;
+  background-color: #f5f5f9;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+pre {
+  line-height: 1.6;
+  margin: 0 !important;
+  white-space: pre-wrap;
+  font-family: -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial !important;
+}
+
+// 去除input上下箭头
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.set-line-clamp(@lines) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: @lines;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+@media (min-width: 576px) {
+  #app {
+    border-left: 1px solid var(--cell-border-color);
+    border-right: 1px solid var(--cell-border-color);
+  }
+}
